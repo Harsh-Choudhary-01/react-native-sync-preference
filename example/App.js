@@ -26,7 +26,7 @@ export default class App extends Component<{}> {
         <Text style={styles.welcome}>☆SyncPreference example☆</Text>
         <Text style={styles.instructions}>STATUS: {this.state.status}</Text>
         <Text style={styles.welcome}>☆NATIVE CALLBACK MESSAGE☆</Text>
-        <Text style={styles.instructions}>{SyncPreference.InitialPrefs}</Text>
+        <Text style={styles.instructions}>{JSON.stringify(SyncPreference.InitialPrefs)}</Text>
       </View>
     );
   }

@@ -60,6 +60,11 @@ RCT_EXPORT_METHOD(clearMultiple:(NSArray *)keys
   return @{ @"InitialPrefs": [self getAll] };
 }
 
++ (BOOL)requiresMainQueueSetup
+{
+  return NO;  // only do this if your module initialization relies on calling UIKit!
+}
+
 RCT_EXPORT_METHOD(clearAll:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject)
 {
