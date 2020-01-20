@@ -18,7 +18,17 @@ export default class App extends Component<{}> {
     message: '--'
   };
   componentDidMount() {
-    SyncPreference.set("test", "hello")
+    console.log("Starting test\n==============\n")
+    console.log(SyncPreference.get("test"))
+    console.log(SyncPreference.getAll())
+    SyncPreference.setMultiple({
+      "test": "hello",
+      "other": "here"
+    }).then(() => console.log("Set finished"))
+    console.log(SyncPreference.getMultiple(["test", "other", "random"]))
+    SyncPreference.clearMultiple(["hello", "other"]).then(() => console.log("Clear finished"))
+    console.log(SyncPreference.getMultiple(["test", "other", "random"]))
+    console.log("\n=================\nFinished test")
   }
   render() {
     return (
@@ -26,7 +36,7 @@ export default class App extends Component<{}> {
         <Text style={styles.welcome}>☆SyncPreference example☆</Text>
         <Text style={styles.instructions}>STATUS: {this.state.status}</Text>
         <Text style={styles.welcome}>☆NATIVE CALLBACK MESSAGE☆</Text>
-        <Text style={styles.instructions}>{JSON.stringify(SyncPreference.InitialPrefs)}</Text>
+        <Text style={styles.instructions}>{this.state.status}</Text>
       </View>
     );
   }
