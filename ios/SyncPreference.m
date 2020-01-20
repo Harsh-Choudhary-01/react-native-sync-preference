@@ -14,7 +14,7 @@
         NSString *value = [[self getDefaultUser] stringForKey:key];
         result[key] = value == nil ? [NSNull null] : value;
     }
-    return result
+    return result;
 }
 
 RCT_EXPORT_MODULE()
