@@ -18,12 +18,7 @@ export default class App extends Component<{}> {
     message: '--'
   };
   componentDidMount() {
-    SyncPreference.sampleMethod('Testing', 123, (message) => {
-      this.setState({
-        status: 'native callback received',
-        message
-      });
-    });
+    SyncPreference.set("test", "hello")
   }
   render() {
     return (
@@ -31,7 +26,7 @@ export default class App extends Component<{}> {
         <Text style={styles.welcome}>☆SyncPreference example☆</Text>
         <Text style={styles.instructions}>STATUS: {this.state.status}</Text>
         <Text style={styles.welcome}>☆NATIVE CALLBACK MESSAGE☆</Text>
-        <Text style={styles.instructions}>{this.state.message}</Text>
+        <Text style={styles.instructions}>{SyncPreference.InitialPrefs}</Text>
       </View>
     );
   }
