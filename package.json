@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-sync-preference.git",
-    "baseUrl": "https://github.com/github_account/react-native-sync-preference"
+    "url": "git+https://github.com/Harsh-Choudhary-01/react-native-sync-preference.git",
+    "baseUrl": "https://github.com/Harsh-Choudhary-01/react-native-sync-preference"
   },
   "keywords": [
     "react-native"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "yourname@email.com"
+    "name": "Harsh Choudhary",
+    "email": "harsh@pickodelivery.com"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",
