@@ -6,6 +6,8 @@ Synchronous gets for user preferences. Uses standard UserDefaults on iOS and Sha
 
 `$ npm install react-native-sync-preference --save`
 
+[![NPM](https://nodei.co/npm/react-native-sync-preference.png)](https://npmjs.org/package/react-native-sync-preference)
+
 ### Mostly automatic installation
 
 Auto linking for RN 0.60+
